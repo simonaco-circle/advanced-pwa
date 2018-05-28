@@ -3,6 +3,7 @@ import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-navigation',
@@ -25,7 +26,8 @@ export class NavigationComponent implements OnDestroy {
     media: MediaMatcher,
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer,
-    private router: Router
+    private router: Router,
+    public auth: AuthService
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();

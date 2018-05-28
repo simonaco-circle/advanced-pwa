@@ -7,7 +7,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule, MatNavList} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
-import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 
@@ -33,7 +32,6 @@ import { environment } from '../environments/environment';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatCardModule,
     MatGridListModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
