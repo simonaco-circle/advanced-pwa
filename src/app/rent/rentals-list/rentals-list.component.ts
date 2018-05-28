@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-rentals-list',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rentals-list.component.css']
 })
 export class RentalsListComponent implements OnInit {
+  id = 1;
+  constructor(private router: Router) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  view() {
+    this.router.navigate(['/rentals', this.id]);
   }
-
 }

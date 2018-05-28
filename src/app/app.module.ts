@@ -16,7 +16,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { PaymentModule } from './payment/payment.module';
 
 @NgModule({
   declarations: [
@@ -33,8 +32,7 @@ import { PaymentModule } from './payment/payment.module';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatGridListModule,
-    PaymentModule
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

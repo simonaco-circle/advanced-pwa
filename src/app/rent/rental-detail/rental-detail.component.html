@@ -1,0 +1,18 @@
+<main>
+  <div class="places">
+    <p class="top">Simona's Places</p>
+    <h1>{{ rental.name }}</h1>
+    <p>
+      <strong>Rating: {{ rental.rating }}</strong>
+    </p>
+
+    <div class="main-img"></div>
+    <p>{{ rental.description }}</p>
+    <app-payment-request [amount]="2300" [label]="'Drean House'"></app-payment-request>
+  </div>
+  <aside class="sidebar">
+    <h3>Other Rentals</h3>
+
+  </aside>
+
+</main>
