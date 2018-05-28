@@ -16,6 +16,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { PaymentModule } from './payment/payment.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { environment } from '../environments/environment';
     MatIconModule,
     MatListModule,
     MatGridListModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    PaymentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
