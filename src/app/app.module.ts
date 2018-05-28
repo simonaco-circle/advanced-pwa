@@ -34,7 +34,6 @@ import { PaymentModule } from './payment/payment.module';
     MatIconModule,
     MatListModule,
     MatGridListModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     PaymentModule
   ],
   providers: [],
