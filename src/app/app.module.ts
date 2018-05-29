@@ -16,9 +16,10 @@ import { HomeComponent } from './home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BluetoothModule } from './bluetooth/bluetooth.module';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, HomeComponent],
+  declarations: [AppComponent, NavigationComponent, HomeComponent, NotificationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,7 +30,8 @@ import { BluetoothModule } from './bluetooth/bluetooth.module';
     MatIconModule,
     MatListModule,
     MatGridListModule,
-    BluetoothModule
+    BluetoothModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
