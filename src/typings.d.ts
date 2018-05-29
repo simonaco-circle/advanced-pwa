@@ -5,3 +5,8 @@ interface NodeModule {
 }
 
 declare var Stripe: any;
+
+declare var BluetoothRemoteGATTServer:any;
+
+declare var BluetoothRemoteGATTService:any;
+declare var BluetoothRemoteGATTCharacteristic:any;

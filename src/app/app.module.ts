@@ -3,12 +3,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule, MatNavList} from '@angular/material/list';
-import {MatIconModule} from '@angular/material/icon';
-import {MatGridListModule} from '@angular/material/grid-list';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule, MatNavList } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,13 +15,10 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { BluetoothModule } from './bluetooth/bluetooth.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavigationComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, NavigationComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,9 +28,10 @@ import { environment } from '../environments/environment';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    BluetoothModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

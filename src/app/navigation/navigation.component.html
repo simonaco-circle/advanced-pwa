@@ -12,6 +12,7 @@
         <a mat-list-item routerLink="home">Home</a>
         <a mat-list-item routerLink="buy">Buy</a>
         <a mat-list-item routerLink="rentals">Rent</a>
+        <a mat-list-item routerLink="bluetooth">Bluetooth</a>
         <a mat-list-item routerLink="" *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Sign In</a>
         <a mat-list-item routerLink="" *ngIf="auth.isAuthenticated()" (click)="auth.logout()">Sign Out</a>
       </mat-nav-list>
