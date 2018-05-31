@@ -7,7 +7,7 @@ import { NotificationComponent } from './notification/notification.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'rentals', loadChildren: './rent/rent.module#RentModule' },
+  { path: 'speakers', loadChildren: './rent/rent.module#RentModule' },
   { path: 'buy', loadChildren: './buy/buy.module#BuyModule' },
   { path: 'bluetooth', component: BatteryLevelComponent },
   { path: 'notification', component: NotificationComponent }

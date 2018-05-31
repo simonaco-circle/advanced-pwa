@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AwesomeService } from '../../awesome.service';
 
 @Component({
   selector: 'app-rentals-list',
@@ -7,12 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./rentals-list.component.css']
 })
 export class RentalsListComponent implements OnInit {
+  peeps: any;
   id = 1;
-  constructor(private router: Router) {}
+  constructor(private router: Router, private awesomeService: AwesomeService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.peeps = this.awesomeService.getPeeps();
+  }
 
-  view() {
-    this.router.navigate(['/rentals', this.id]);
+  view(peep) {
+    this.router.navigate(['/speakers', peep.id]);
   }
 }

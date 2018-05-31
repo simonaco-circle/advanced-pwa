@@ -1,18 +1,24 @@
 <main>
   <div class="places">
-    <p class="top">Simona's Places</p>
-    <h1>{{ rental.name }}</h1>
+    <p class="top">{{peep.talk}}</p>
+    <h1>{{ peep.name }}</h1>
     <p>
-      <strong>Rating: {{ rental.rating }}</strong>
+      <strong>Twitter hande: {{ peep.twitter }}</strong>
     </p>
 
-    <div class="main-img"></div>
-    <p>{{ rental.description }}</p>
-    <app-payment-request [amount]="2300" [label]="'Drean House'"></app-payment-request>
+    <img [src]="peep.photo"/>
+    <p>{{ peep.details }}</p>
+    <!--<app-payment-request [amount]="2300" [label]="'Donate'"></app-payment-request>-->
   </div>
   <aside class="sidebar">
-    <h3>Other Rentals</h3>
-
-  </aside>
-
+      <h3>All Talks</h3>
+      <div *ngFor="let peep of peeps" class="location">
+        <img [src]="peep.photo" [alt]="peep.name" />
+        <p class="top">
+          <strong>{{ peep.name }}</strong>
+        </p>
+        <p>{{ peep.details }}</p>
+        <hr />
+      </div>
+    </aside>
 </main>
